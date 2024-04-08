@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [{
+        "label": "Start Rimworld Quicktest",
+        "command": "/Users/alexhoward/Library/Application Support/Steam/SteamApps/common/RimWorld/RimWorldMac.app/Contents/MacOS/RimWorld by Ludeon Studios",
+		"args": ["-quicktest"],
+		"isBackground": true,
+        "type": "shell",
+    },
+	{
+		"label": "DotNet Build to Rimworld Mod Folder",
+		"command": "dotnet",
+		"args": ["build", "${workspaceFolder}/confluence_ui_mod.csproj", "-o", "/Users/alexhoward/Library/Application Support/Steam/SteamApps/common/RimWorld/RimWorldMac.app/Mods/Confluence/Assemblies"],
+		"type": "shell",
+		"isBackground": true,
+	}	
+]
+}

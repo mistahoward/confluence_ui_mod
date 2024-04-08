@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using RimWorld;
 using Verse;
 
 namespace confluence_ui_mod {
@@ -9,6 +8,9 @@ namespace confluence_ui_mod {
         public ConfluenceMod(ModContentPack content) : base(content)
         {
 			Harmony = new Harmony("mistahoward.confluence");
+			Harmony.DEBUG = true;
+			Harmony.PatchAll();
+			Log.Message("Confluence UI Mod Loaded");
         }
     }
 }
