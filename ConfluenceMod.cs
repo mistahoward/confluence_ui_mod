@@ -50,6 +50,18 @@ namespace confluence_ui_mod {
 				}
 			}
 			Instance.JoysticksOnLoad = currentJoysticks;
+			if (Input.inputString != "")
+			{
+				Log.Message(Input.inputString);
+			}
+			// check if any controller buttons are pressed
+			foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
+			{
+				if (Input.GetKey(vKey))
+				{
+					Log.Message(vKey.ToString());
+				}
+			}
 		}
     }
 }
